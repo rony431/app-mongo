@@ -17,6 +17,22 @@ exports.createHero = function (req, res, next) {
         })
     })
 }
+exports.createGuest = function (req, res, next) {
+    var guest = {
+        name: req.body.name,
+    };
+
+    Heros.create(guest, function(err, guest) {
+        if(err) {
+            res.json({
+                error : err
+            })
+        }
+        res.json({
+            message : "<h1>El visitante fue almacenado con éxito</h1>"
+        })
+    })
+}
 
 exports.getHeros = function(req, res, next) {
     Heros.get({}, function(err, heros) {

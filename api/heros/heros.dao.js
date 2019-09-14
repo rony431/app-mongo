@@ -24,5 +24,5 @@ herosSchema.statics = {
     }
 }
 
-var herosModel = mongoose.model('Heros', herosSchema);
+var herosModel = mongoose.model('Visitor', herosSchema);
 module.exports = herosModel;

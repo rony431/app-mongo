@@ -4,13 +4,16 @@ var herosSchema = new Schema({
     name :{
         type: String,
         unique : false,
-        required : true
+        required : false,
+        default: "Anónimo"
+
     },
-    description : {
-        type: String,
-        unique : false,
-        required : true
-    }
+    date: { 
+        type: Date, 
+        default: Date.now, 
+        required : false
+    },
+    
 }, {
     timestamps: true
 });

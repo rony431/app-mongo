@@ -33,7 +33,7 @@ app.use(function(req, res, next) {
  });
 
 // use express router
-app.use('/api',router);
+app.use('/',router);
 //call heros routing
 herosRoutes(router);
 
